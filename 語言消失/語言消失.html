@@ -15,11 +15,30 @@
 <!--CSS-->
 <style type = "text/css">
     #bigTitle {
-        font-weight:bold;
-        text-align:center;
-        font-size:400%;
-        height:100px;
+        font-weight : bold;
+        text-align : center;
+        font-size : 400%;
+        height : 100px;
         }
+    #small_title{
+        font-weight : bold;
+        text-align : center;
+        font-size : 100%;
+    }
+    .context{
+        background-color : aquamarine;
+        color : black;
+        font-weight : lighter;
+        width : 90%;
+        height : 300px;
+        margin : auto;
+    }
+    .image{
+        width : 300;
+        height : 200;
+        display : block;
+        margin : auto;
+    }
     p,h1,h2,div {font-family:Microsoft JhengHei;} 
 </style>
 <!--CSS-->
@@ -29,7 +48,7 @@
     <div id="header-wrapper">
         <div id="header" class="container">
             <div id="logo"  style="background-color:#000000;width:320px;text-align:center;">
-                <h1><a href="#" style="color:#FFFFFF;font-family:serif;font-size:40px">Language 語言</a></h1>
+                <h1><a href="#" style="color:#FFFFFF; font-family:Microsoft JhengHei; font-size:40px">Language 語言</a></h1>
             </div>
             <div id="menu">
                 <ul>
@@ -46,25 +65,49 @@
         </div>
     </div>
     <!-- end #header -->
-    <div id="featured-content">
-        <div id="column1">
-           <h2>為何需要醫療援助</h2>
-            <p><img src="img06.jpg" width="300" height="150" alt=""></p>
-            <p>因為偏鄉原住民的地理位置.....</p>
+    <div id="featured-content" style="background-color:olivedrab;">
+        <div id="introduction" style="background-color:bisque;">
+                <font style="font-size: 85px">多</font>
+                <div style="font-size:30px; display:inline" > 
+                    <div style="display: inline;">族群、多文化、多語言的台灣社會，</div>
+                    <div style="padding-left: 90px;">台灣原住民族的教育政策，在<font color="blue">「獨尊國語」</font>的語言政策的影響，</div>
+                    <div style="padding-left: 90px; line-height:75px;">少數族群的語言因而嚴重流失，甚至面臨<font style="color:red";>消失的命運。</font></div></br>
+                </div>
+        </div>
+
+        <div id="column1" style="background-color: rgb(167, 80, 145); float:left;">
+           <h2 id = "small_title">來自原住民季刊</h2>
+            <p><img class = "image" src="img06.jpg"></p>
+            <p class = "context">
+                    臺灣原住民14族、42種方言中，有9種語言被列為「瀕危語言」；
+                    原民會擬定3大計畫目標，展開搶救瀕危族語大作戰，
+                    期能重建「自己的族語自己救，小孩的族語自己教」的部落意識，
+                    激發族人投入搶救族語的熱忱，解除原住民語言傳承的危機。 </p>
             <p class="button"><a href="#">Read More</a></p>
         </div>
-        <div id="column2">
-            <h2>需要哪些援助</h2>
-            <p><img src="img07.jpg" width="300" height="150" alt=""></p>
-            <p>原住民所缺乏的醫療資源有...</p>
+
+        <div id="column2" style="background-color: rgb(167, 80, 145); ">
+            <h2 id = "small_title">需要哪些援助</h2>
+            <p><img src="img07.jpg" width="300" height="200" style="display:block; margin:auto;"></p>
+            <p class = "context">
+                    臺灣原住民14族、42種方言中，有9種語言被列為「瀕危語言」；
+                    原民會擬定3大計畫目標，展開搶救瀕危族語大作戰，
+                    期能重建「自己的族語自己救，小孩的族語自己教」的部落意識，
+                    激發族人投入搶救族語的熱忱，解除原住民語言傳承的危機。 </p>
             <p class="button"><a href="#">Read More</a></p>
         </div>
-        <div id="column3">
-            <h2>可以如何援助他們</h2>
-            <p><img src="img08.jpg" width="300" height="150" alt=""></p>
-            <p>如果您願意幫助他們，可以...</p>
-            <p class="button"><a href="#">Read More</a></p>
+
+        <div id="column3" style="background-color: rgb(167, 80, 145); float:right;">
+                <h2 id = "small_title">需要哪些援助</h2>
+                <p><img src="img08.jpg" width="300" height="200" style="display:block; margin:auto;"></p>
+                <p class = "context">
+                        臺灣原住民14族、42種方言中，有9種語言被列為「瀕危語言」；
+                        原民會擬定3大計畫目標，展開搶救瀕危族語大作戰，
+                        期能重建「自己的族語自己救，小孩的族語自己教」的部落意識，
+                        激發族人投入搶救族語的熱忱，解除原住民語言傳承的危機。 </p>
+                <p class="button"><a href="#">Read More</a></p>
         </div>
+
     </div>
 <div id="footer">
 	<p>© 逢甲大學web程式設計<a href="http://www.fcu.edu.tw">首頁</a>. Design by 不要當我</p>
