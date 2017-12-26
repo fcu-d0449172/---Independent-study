@@ -12,53 +12,125 @@
         <link href="Mstyle01.css" rel="stylesheet" type="text/css">
         <link href="Mstyle02.css" rel="stylesheet" type="text/css">
         <link href="Mstyle03.css" rel="stylesheet" type="text/css" media="screen">
-</head>
-<body>
-    <div id="wrapper">
-        <div id="header-wrapper">
-            <div id="header" class="container">
-                <div id="logo"  style="background-color:#000000;">
-                    <h2><a href="#" style="color:#FFFFFF;">Population<br>人口問題</a></h2>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- JQuery -->
+        <script>
+            $(document).ready(function() {
+                $('#btn1').hover(function() {
+                    $(this).addClass('.titleOn');
+                }, function() {
+                    $(this).removeClass('.titleOn');
+                }).click(function() {
+                    $('#child1').slideToggle();
+                }).siblings('#child1').hide();
+
+                $('#btn2').hover(function() {
+                    $(this).addClass('.titleOn');
+                }, function() {
+                    $(this).removeClass('.titleOn');
+                }).click(function() {
+                    $('#child2').slideToggle();
+                }).siblings('#child2').hide();
+            });
+        </script>
+        <!-- CSS -->
+        <style type = "text/css">
+            #logo {
+                background-color:#000000;
+                width: 320px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            p, h1, h2, div { font-family:Microsoft JhengHei; } 
+            #left {
+                width: 42%;
+                line-height: 50px;
+                padding-left: 80px;
+                float: left;
+            }
+            #right {
+                width: 42%;
+                line-height: 50px;
+                padding-right: 50px;
+                float: right;
+            }
+            .button {
+                position: relative; 
+                left: 150px; 
+                top: 0px; 
+                background: url(icon_q_a.gif) no-repeat 0px 3px;
+                color:#1186ec;
+                cursor: pointer;
+            }
+            
+            .titleOn { text-decoration: underline; }
+            .child {
+                margin: 6px 0 0;
+                background: url(icon_q_a.gif) no-repeat 0px -24px;
+                color:#000000;
+            }
+        </style>
+        <!--Java Script-->
+        
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header-wrapper">
+                <div id="header" class="container">
+                    <div id="logo">
+                        <h2><a href="#" style="color:#FFFFFF;font-size: 40px;line-height: 10px;">Population<br>人口問題</a></h2>
+                    </div>
+                    <div id="menu">
+                        <ul>
+                            <li class="current_page_item" onclick="javascript:location.href='https://fcu-d0449172.github.io/webtest/'"><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Problems</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Donate</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="menu">
-                    <ul>
-                        <li class="current_page_item" onclick="javascript:location.href='https://fcu-d0449172.github.io/webtest/'"><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Problems</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Donate</a></li>
-                    </ul>
+                <div id="banner">
+                    <div class="content"><img src="images/人口問題.jpg" width="1000" ></div>
+                </div>
+            </div>  
+            <!-- end #header -->
+            <div id="featured-content" style="background-color:rgb(29, 198, 204)">
+                <div id="Map" style="background-color:rgb(242, 236, 205)">
+                    <a href="http://www.twedance.org/aboriginal00.aspx"><img  src="images/人口分布.png" title="人口分布" alt="人口分布"></a>
+                </div>
+                <div id="left">
+                    <div>
+                        <h2>主要問題</h2>
+                        <p><img src="images/高齡化.png" width="200" alt="主要問題"></p>
+                    </div>
+                    <div class="headline">
+                        <p>少子化、高齡化、人口變遷...</p>
+                        <p id="child1" class="child">
+                            123
+                        </p>
+                        <div id="btn1" class="button">Read More</div>
+                    </div>
+                </div>
+                <div id="right">           
+                    <div >
+                        <h2>解決辦法</h2>
+                        <p><img src="images/解決辦法.png" width="200" alt="解決辦法"></p>
+                    </div>
+                    <div class="headline">
+                        <p>近年來地方政府持續推動...</p>
+                        <p id="child2" class="child">
+                            456
+                        </p>
+                        <div id="btn2" class="button">Read More</div>
+                    </div>
                 </div>
             </div>
-            <div id="banner">
-                <div class="content"><img src="images/人口問題.jpg" width="1000" height="400" alt=""></div>
-            </div>
-        </div>
-        <!-- end #header -->
-        <div id="featured-content">
-            <div id="column1">
-            <h2>人口分布</h2>
-                <p><img src="images/人口分布.png" width="200" height="150" alt=""></p>
-                <p>各鄉鎮...</p>
-                <p class="button"><a href="#">Read More</a></p>
-            </div>
-            <div id="column2">
-                <h2>主要問題</h2>
-                <p><img src="images/高齡化.jpg" width="200" height="150" alt=""></p>
-                <p>少子化、高齡化、人口變遷...</p>
-                <p class="button"><a href="#">Read More</a></p>
-            </div>
-            <div id="column3">
-                <h2>解決辦法</h2>
-                <p><img src="images/解決辦法.png" width="200" height="150" alt=""></p>
-                <p>地方政府推動...</p>
-                <p class="button"><a href="#">Read More</a></p>
-            </div>
-        </div>
-        <div id="footer">
-            <p>© 逢甲大學web程式設計<a href="http://www.fcu.edu.tw">首頁</a>. Design by 不要當我</p>
-        </div>
-        <!-- end #footer -->
+            <!-- end #featured-content -->
+            <div id="footer">
+                <p>© 逢甲大學web程式設計<a href="http://www.fcu.edu.tw">首頁</a>. Design by 不要當我</p>
+            </div>  
+            <!-- end #footer -->
         </div>
     </body>
 </html>
