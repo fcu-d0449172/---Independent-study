@@ -1,50 +1,88 @@
 
 <!DOCTYPE html>
-<html><head>
-<!--<meta name="keywords" content="" />
-<meta name="description" content="" />-->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta http-equiv="content-type" content="text/html; charset=utf-8">
-<!--<title>ColoreGiallo by TEMPLATED</title>-->
-<title>web 專題</title>
-<!--<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />-->
-<link href="Mstyle01.css" rel="stylesheet" type="text/css">
-<link href="Mstyle02.css" rel="stylesheet" type="text/css">
-<link href="Mstyle03.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS-->
-<style type = "text/css">
-    #bigTitle {
-        font-weight : bold;
-        text-align : center;
-        font-size : 400%;
-        height : 100px;
-        }
-    #small_title{
-        font-weight : bold;
-        text-align : center;
-        font-size : 100%;
-    }
-    .context{
-        background-color : aquamarine;
-        color : black;
-        font-weight : lighter;
-        width : 90%;
-        height : 300px;
-        margin : auto;
-    }
-    .image{
-        width : 300;
-        height : 200;
-        display : block;
-        margin : auto;
-    }
-    p,h1,h2,div {font-family:Microsoft JhengHei;} 
-</style>
-<!--CSS-->
-</head>
+<html>
+        <head>
+            <!--<meta name="keywords" content="" />
+            <meta name="description" content="" />-->
+            <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta http-equiv="content-type" content="text/html; charset=utf-8">
+            
+            <!--<title>ColoreGiallo by TEMPLATED</title>-->
+            <title>web 專題</title>
+            <!--<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+            <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+            <link href="style.css" rel="stylesheet" type="text/css" media="screen" />-->
+            <link href="Mstyle01.css" rel="stylesheet" type="text/css">
+            <link href="Mstyle02.css" rel="stylesheet" type="text/css">
+            <link href="Mstyle03.css" rel="stylesheet" type="text/css" media="screen">
+            <!--Script-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <!--JQuery-->
+            <script>
+                    $(document).ready(function(){
+                      $("#btn1").click(function(){
+                        $("#txt").toggle(300);
+                      });
+                    });
+            </script>
+
+            <!--CSS-->
+            <style type = "text/css">
+                #bigTitle {
+                    font-weight : bold;
+                    text-align : center;
+                    font-size : 400%;
+                    height : 100px;
+                    }
+                #small_title{
+                    color: rgb(230, 44, 44);
+                    font-weight : bold;
+                    text-align : center;
+                    font-size : 100%;
+                }
+                .context{
+                    background-color : aquamarine;
+                    color : black;
+                    font-weight : lighter;
+                    width : 90%;
+                    height : 400px;
+                    margin : auto;
+                }
+                .image{
+                    width : 300;
+                    height : 200;
+                    display : block;
+                    margin : auto;
+                }
+                p,h1,h2,div {font-family:Microsoft JhengHei;} 
+            </style>
+
+            <!--Java Script-->
+            
+            <script>
+                    window.onload=startTime;
+                    function startTime(){
+                        var today=new Date();
+                        var h=today.getHours();
+                        var m=today.getMinutes();
+                        var s=today.getSeconds();// 在小於10的數字前加一個0
+                        m=checkTime(m);
+                        s=checkTime(s);
+                        document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+                        t=setTimeout(function(){startTime()},500);
+                    }
+                    function checkTime(i){
+                        if (i<10)
+                            i="0" + i;
+                        return i;
+                    }
+            </script>
+
+        </head>
 <body>
-<div id="wrapper">
+    <!--Bootstrap -->
+<div class = "jumbotron text-center" id="wrapper">
     <div id="header-wrapper">
         <div id="header" class="container">
             <div id="logo"  style="background-color:#000000;width:320px;text-align:center;">
@@ -75,7 +113,7 @@
                 </div>
         </div>
 
-        <div id="column1" style="background-color: rgb(167, 80, 145); float:left;">
+        <div id="column1" style="background-color: rgb(95, 88, 196); float:left;">
            <h2 id = "small_title">搶救大作戰</h2>
            <p><img src="img06.png" width="300"  style="display:block; margin:auto;"></p>
             <p class = "context">
@@ -83,10 +121,12 @@
                     原民會擬定3大計畫目標，展開搶救瀕危族語大作戰，
                     期能重建「自己的族語自己救，小孩的族語自己教」的部落意識，
                     激發族人投入搶救族語的熱忱，解除原住民語言傳承的危機。 </p>
-            <p class="button"><a target="_blank" href="https://www.apc.gov.tw/portal/getfile?source=DBE50CC4AED2CB00FAFB9859EF31AC3BF7F73AB93585A98D11C41C37ACAE38143912FA76E136106380DAD7DB964B9D87EF5AA3BDDDC1B1B1A852238F00A7C162&filename=31472F91CC7D41E09D4972C5AF7E36A73B91B9DF71659F0C">Read More</a></p>
+            </br></br>
+            <!-- Bootstrap - btn -->
+            <a class="btn-lg btn-default" role ="button" target="_blank" href="https://www.apc.gov.tw/portal/getfile?source=DBE50CC4AED2CB00FAFB9859EF31AC3BF7F73AB93585A98D11C41C37ACAE38143912FA76E136106380DAD7DB964B9D87EF5AA3BDDDC1B1B1A852238F00A7C162&filename=31472F91CC7D41E09D4972C5AF7E36A73B91B9DF71659F0C">Read More</a>
         </div>
 
-        <div id="column2" style="background-color: rgb(167, 80, 145); ">
+        <div id="column2" style="background-color: rgb(95, 88, 196); ">
             <h2 id = "small_title">我們的處境</h2>
             <p><img src="未命名-1.jpg" width="300" style="display:block; margin:auto;"></p>
             <p class = "context">
@@ -94,23 +134,29 @@
                 他們的語言正面臨消失的危機。是什麼因素導致語言的消逝？
                 台灣原住民又該如何有效保存族群裡珍貴的語言文化？
                 且聽科博館人類學組主任何傳坤道來。 </p>
-            <p class="button"><a target="_blank" href="https://www.thenewslens.com/article/45558">Read More</a></p>
+            <br><br>
+            <a class="btn-lg btn-default" role ="button" target="_blank" href="https://www.thenewslens.com/article/45558">Read More</a>
         </div>
 
-        <div id="column3" style="background-color: rgb(167, 80, 145); float:right;">
+        <div id="column3" style="background-color: rgb(95, 88, 196); float:right;">
                 <h2 id = "small_title">政府的聲音</h2>
                 <p><img src="未命名-2.jpg" width="300" style="display:block; margin:auto;"></p>
                 <p class = "context">
                     立法院今下午三讀通過「原住民族語言發展法」，
                     將原住民族語言列為國家語言入法，並明定政府應每年寬列預算，
                     推動各項族語發展措施、培訓族語老師，學校也要提供族語課程。</p>
-                <p class="button"><a target="_blank" href="https://udn.com/news/story/7314/2487183">Read More</a></p>
+                <br><br>
+                <a class="btn-lg btn-default" role ="button" target="_blank" href="https://udn.com/news/story/7314/2487183">Read More</a>
         </div>
 
     </div>
 <div id="footer">
-	<p>© 逢甲大學web程式設計<a href="http://www.fcu.edu.tw">首頁</a>. Design by 不要當我</p>
+    
+    <span id="txt" style="font-size:30px; display:none"></span>
+    <p>© 逢甲大學web程式設計<a href="http://www.fcu.edu.tw">首頁</a>. Design by 不要當我 </p>
 </div>
+        <button id = "btn1" class = "btn btn-success sm" style="font-size:20px;float:right;">時間</button> 
+
 <!-- end #footer -->
 
 
